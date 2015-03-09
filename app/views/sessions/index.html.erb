@@ -1,0 +1,6 @@
+<% if current_user %>
+  <%= current_user.name %>
+  <%= link_to "Log out", logout_path %>
+<% else %>
+  <%= link_to "Auth with Coub", "/auth/coub" %>
+<% end %>
