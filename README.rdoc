@@ -1,28 +1,10 @@
-== README
+This is a test app for Coub API: http://coub.com/dev/docs/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+You need to register your application on http://coub.com/dev/applications to use this application.
 
-Things you may want to cover:
+This app requires ffmpeg with freetype support, on Mac you can install it via Homebrew:
 
-* Ruby version
+  brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-schroedinger --with-speex --with-theora --with-tools
 
-* System dependencies
+Feel free to fork and clone and do whatever you want with this code.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

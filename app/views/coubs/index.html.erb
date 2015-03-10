@@ -1,0 +1,14 @@
+<% if current_user %>
+  <p>You’re logged in as <%= current_user.name %>. <%= link_to "Log out", logout_path %></p>
+  <%= form_for Coub.new, url: {action: "create"} do |f| %>
+    <%= f.text_field :text1, placeholder: "To me", maxlength: 30, size: 50 %><br />
+    <%= f.text_field :text2, placeholder: "Your Coub API", maxlength: 30, size: 50 %><br />
+    <%= f.text_field :text3, placeholder: "Is a piece of shit", maxlength: 30, size: 50 %><br />
+    <%= f.select :visibility_type, options_for_select(["public", "friends", "unlisted", "private"]) %><br />
+    <%= f.text_field :tags, placeholder: "first tag, second tag" %><br />
+    <%= f.submit "Create Coub" %>
+  <% end %>
+<% else %>
+  <p>Please <a href="/auth/coub">log in via Coub</a>.</p>
+<% end %>
+

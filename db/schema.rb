@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305134343) do
+ActiveRecord::Schema.define(version: 20150310145025) do
+
+  create_table "coubs", force: true do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "visibility_type"
+    t.string   "tags"
+    t.string   "permalink"
+    t.string   "coub_id"
+    t.string   "text1"
+    t.string   "text2"
+    t.string   "text3"
+    t.string   "video_file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "coubs", ["user_id"], name: "index_coubs_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "provider"
