@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :coubs, only: [:create]
 
   get "/auth/:provider/callback" => "sessions#create"
-  get "logout" => "sessions#destroy"
+  delete "logout" => "sessions#destroy"
 
 end
