@@ -21,7 +21,7 @@ class Coub < ActiveRecord::Base
   def generate_video_file
     self.video_file = File.join(Rails.root, "tmp", "output-#{Time.now.to_i}.mp4")
     template_file = File.join(Rails.root, "app", "assets", "videos", "template.mp4")
-    `ffmpeg -i #{template_file} -vf \"[in]#{ffmpeg_drawtext(text1, 1, 2)}, #{ffmpeg_drawtext(text2, 3, 5)}, #{ffmpeg_drawtext(text3, 6.3, 8)} [out]\" #{video_file}`
+    `ffmpeg -i #{template_file} -vf \"#{ffmpeg_drawtext(text1, 1, 2)}, #{ffmpeg_drawtext(text2, 3, 5)}, #{ffmpeg_drawtext(text3, 6.3, 8)}\" #{video_file}`
     return video_file
   end
 
@@ -38,7 +38,7 @@ class Coub < ActiveRecord::Base
 
     client.post do |r|
       r.url "coubs/#{coub_id}/upload_video"
-      r.headers["Content-Type"] = "video/flv"
+      r.headers["Content-Type"] = "video/mp4"
       r.body = File.open(video_file, "r").read
     end
 
