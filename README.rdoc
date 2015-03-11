@@ -4,7 +4,7 @@ You need to register your application on http://coub.com/dev/applications to use
 
 This app requires ffmpeg with freetype support, on Mac you can install it via Homebrew:
 
-  brew install ffmpeg --with-fdk-aac --with-ffplay --with-freetype --with-frei0r --with-libass --with-libvo-aacenc --with-libvorbis --with-libvpx --with-opencore-amr --with-openjpeg --with-opus --with-rtmpdump --with-schroedinger --with-speex --with-theora --with-tools
+  brew install ffmpeg --with-freetype
 
 Feel free to fork and clone and do whatever you want with this code.
 
