@@ -1,6 +1,6 @@
 This is a test app for Coub API (http://coub.com/dev/docs) described in this tutorial (in Russian): https://medium.com/@igorgl/туториал-по-coub-api-6bf7988d2c9d
 
-You need to register your application on http://coub.com/dev/applications to use this application.
+You need to register your application on http://coub.com/dev/applications to use it and add Application ID and Secret to COUB_KEY and COUB_SECRET enviromental variables (or put it into config/initializers/ominauth.rb).
 
 This app requires ffmpeg with freetype support, on Mac you can install it via Homebrew:
 
