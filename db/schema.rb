@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20150310145025) do
     t.string   "text1"
     t.string   "text2"
     t.string   "text3"
-    t.string   "video_file"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

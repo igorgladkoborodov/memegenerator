@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.2.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -38,7 +38,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "omniauth-coub"
+# HTTP client library
+gem 'faraday'
 
-gem "faraday"
-
+# OmniAuth strategy for Coub API
+gem 'omniauth-coub'
